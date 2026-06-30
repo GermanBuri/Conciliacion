@@ -1,0 +1,2805 @@
+Actúa como un arquitecto senior de software, experto en Python, desarrollo web empresarial, automatización financiera, conciliación bancaria, seguridad, bases de datos y experiencia de usuario.
+
+Quiero desarrollar por etapas una plataforma web profesional de conciliación bancaria automatizada, similar en concepto a soluciones como Conciliac, pero creada desde cero, robusta, escalable e intuitiva para empresas medianas y grandes.
+
+El sistema debe permitir cargar extractos bancarios y libros contables, procesar la información, normalizar datos, comparar movimientos, detectar coincidencias automáticas, identificar diferencias, generar alertas, permitir conciliación manual asistida y producir reportes profesionales.
+
+Tecnologías principales:
+- Backend: Python
+- Framework sugerido: FastAPI o Django, elige el más adecuado y justifica
+- Frontend: web intuitiva, moderna y responsive
+- Base de datos: PostgreSQL
+- Procesamiento de archivos: Excel, CSV, TXT y posiblemente PDF
+- Autenticación segura por usuarios, roles y permisos
+- Arquitectura modular, mantenible y preparada para crecer
+- Desarrollo local en Visual Studio Code
+- Código limpio, documentado y organizado
+
+Desarrolla el proyecto paso a paso por etapas profesionales.
+
+Etapa 1: análisis funcional
+Define los módulos principales:
+1. Gestión de empresas
+2. Gestión de usuarios y roles
+3. Carga de bancos
+4. Carga de información contable
+5. Normalización de datos
+6. Motor de conciliación automática
+7. Reglas de coincidencia
+8. Conciliación manual asistida
+9. Reportes y dashboards
+10. Auditoría y trazabilidad
+11. Configuración avanzada
+
+Etapa 2: arquitectura
+Propón una arquitectura robusta:
+- Estructura de carpetas
+- Separación backend, frontend, servicios y base de datos
+- Modelos principales
+- APIs necesarias
+- Flujo de datos
+- Seguridad
+- Escalabilidad
+- Manejo de errores
+- Logs y auditoría
+
+Etapa 3: modelo de datos
+Diseña las tablas necesarias para:
+- Empresas
+- Usuarios
+- Roles
+- Bancos
+- Cuentas bancarias
+- Extractos bancarios
+- Movimientos bancarios
+- Libros contables
+- Movimientos contables
+- Reglas de conciliación
+- Conciliaciones
+- Diferencias
+- Estados
+- Auditoría
+
+Incluye campos recomendados, tipos de datos, relaciones y claves.
+
+Etapa 4: motor de conciliación
+Diseña un motor inteligente de conciliación que permita:
+- Coincidencia exacta por valor, fecha y referencia
+- Coincidencia flexible por rangos de fecha
+- Coincidencia por similitud de texto
+- Coincidencia uno a uno
+- Coincidencia uno a muchos
+- Coincidencia muchos a uno
+- Tolerancias configurables
+- Estados de conciliación
+- Porcentaje de confianza
+- Revisión manual cuando no haya certeza
+
+Etapa 5: interfaz web
+Diseña una experiencia intuitiva con pantallas para:
+- Inicio de sesión
+- Dashboard principal
+- Carga de archivos
+- Validación de datos cargados
+- Resultados de conciliación automática
+- Bandeja de pendientes
+- Vista comparativa banco vs contabilidad
+- Conciliación manual
+- Reportes
+- Exportación a Excel y PDF
+- Administración del sistema
+
+Etapa 6: desarrollo incremental
+Crea el proyecto por fases:
+Fase 1: proyecto base y autenticación
+Fase 2: carga de archivos
+Fase 3: lectura y normalización de datos
+Fase 4: modelo de datos en PostgreSQL
+Fase 5: motor básico de conciliación
+Fase 6: interfaz de revisión
+Fase 7: reportes
+Fase 8: auditoría
+Fase 9: pruebas
+Fase 10: optimización y despliegue
+
+Etapa 7: código inicial
+Genera el código inicial del proyecto:
+- Estructura de carpetas
+- requirements.txt
+- archivo .env.example
+- configuración de base de datos
+- modelos iniciales
+- APIs iniciales
+- servicios de carga de archivos
+- servicio básico de conciliación
+- instrucciones para ejecutarlo en VS Code
+
+Etapa 8: calidad empresarial
+Asegúrate de incluir:
+- Validaciones robustas
+- Manejo de errores
+- Logs
+- Pruebas unitarias
+- Pruebas de integración
+- Seguridad
+- Control de permisos
+- Documentación técnica
+- Documentación de usuario
+- Preparación para despliegue en servidor o nube
+
+Importante:
+No generes todo el sistema de una sola vez.
+Primero entrégame el plan maestro profesional.
+Después espera mi aprobación para iniciar la Fase 1.
+Cuando genere código, hazlo en bloques claros, explicando dónde va cada archivo.
+El objetivo es construir un sistema real, empresarial, escalable, seguro e intuitivo.
+
+Inicia con la Etapa 1 y no escribas código todavía.
+
+Mostrar más
+8:20 a.m.
+Perfecto. Vamos a hacerlo como un producto empresarial real, no como un demo improvisado.
+
+Empezamos con la Etapa 1: análisis funcional, y te dejo además el plan maestro para que tengamos una ruta clara antes de entrar a diseño técnico y construcción. No voy a generar código todavía.
+
+Plan Maestro
+Construiremos la plataforma en esta secuencia:
+
+Etapa 1: Análisis funcional
+Definir qué hace el sistema, quién lo usa, qué módulos necesita y cómo fluye la operación.
+
+Etapa 2: Arquitectura
+Elegir stack, estilo arquitectónico, estructura del proyecto, seguridad, escalabilidad e integración.
+
+Etapa 3: Modelo de datos
+Diseñar el esquema relacional y las entidades clave del negocio.
+
+Etapa 4: Motor de conciliación
+Diseñar la lógica de matching automático y asistido.
+
+Etapa 5: UX/UI web
+Diseñar pantallas, flujos operativos y experiencia de usuario.
+
+Etapa 6: Desarrollo incremental
+Ejecutar por fases controladas y verificables.
+
+Etapa 7: Código inicial
+Crear base técnica del proyecto y arrancar Fase 1.
+
+Etapa 8: Calidad empresarial
+Endurecer seguridad, pruebas, trazabilidad, documentación y despliegue.
+
+Etapa 1: Análisis funcional
+1. Objetivo del sistema
+La plataforma debe permitir a una empresa comparar de forma automática y asistida los movimientos de sus extractos bancarios contra sus registros contables, reduciendo trabajo manual, errores operativos, tiempos de cierre y riesgos de auditoría.
+
+El sistema debe cubrir estos frentes:
+
+ingestión de archivos bancarios y contables
+validación y normalización de datos
+conciliación automática por reglas
+revisión manual asistida
+gestión de diferencias y excepciones
+trazabilidad completa de cada acción
+reportes ejecutivos, operativos y de auditoría
+2. Tipos de usuarios
+Propongo estos perfiles iniciales:
+
+Administrador global
+Configura el sistema, empresas, seguridad, catálogos y parámetros generales.
+
+Administrador de empresa
+Administra usuarios de su empresa, cuentas bancarias, formatos y reglas de conciliación.
+
+Analista de conciliación
+Carga archivos, ejecuta conciliaciones, revisa pendientes, ajusta coincidencias y documenta diferencias.
+
+Supervisor / Jefe financiero
+Revisa resultados, aprueba conciliaciones, monitorea alertas y consulta reportes.
+
+Auditor interno / externo
+Consulta información histórica, evidencia, cambios, bitácoras y trazabilidad sin alterar datos operativos.
+
+Esto ya marca una necesidad importante: seguridad multiempresa, RBAC y auditoría fuerte desde el inicio.
+
+3. Alcance funcional de los módulos
+3.1 Gestión de empresas
+Objetivo: soportar múltiples empresas o unidades de negocio dentro de una misma plataforma.
+
+Funciones clave:
+
+crear, editar y desactivar empresas
+registrar datos fiscales y administrativos
+configurar moneda base, zona horaria y formato de fechas
+parametrizar cuentas bancarias por empresa
+definir catálogos y reglas propias por empresa
+Resultado esperado:
+cada empresa opera aislada lógicamente, con su propia configuración, usuarios, reglas y datos.
+
+3.2 Gestión de usuarios y roles
+Objetivo: asegurar acceso controlado y segregación de funciones.
+
+Funciones clave:
+
+creación y administración de usuarios
+asignación de roles y permisos
+autenticación segura
+bloqueo/desbloqueo de usuarios
+política de contraseñas
+recuperación de acceso
+registro de sesiones y eventos de seguridad
+Resultado esperado:
+cada usuario solo ve y ejecuta lo que su rol permite.
+
+3.3 Carga de bancos
+Objetivo: recibir extractos bancarios en distintos formatos.
+
+Entradas esperadas:
+
+Excel
+CSV
+TXT
+potencialmente PDF estructurado
+Funciones clave:
+
+carga manual de archivos
+validación de formato
+selección de cuenta bancaria destino
+detección de duplicados de archivo
+previsualización de datos
+control de versiones de carga
+trazabilidad del archivo original
+Resultado esperado:
+los extractos quedan almacenados, validados y listos para ser procesados.
+
+3.4 Carga de información contable
+Objetivo: importar libros o auxiliares contables que serán comparados contra banco.
+
+Entradas esperadas:
+
+Excel
+CSV
+TXT
+exportaciones de ERP
+Funciones clave:
+
+carga de archivos contables por período
+asignación a empresa, cuenta y fuente
+validación de estructura
+detección de registros repetidos
+previsualización antes de confirmar importación
+Resultado esperado:
+la información contable queda disponible en un formato homogéneo para conciliación.
+
+3.5 Normalización de datos
+Objetivo: convertir entradas heterogéneas a un modelo estándar.
+
+Problemas que resuelve:
+
+fechas en formatos distintos
+débitos/créditos representados de forma diferente
+referencias con ruido
+nombres de terceros inconsistentes
+valores con separadores regionales distintos
+Funciones clave:
+
+homologación de fechas
+estandarización de importes
+clasificación de débito/crédito
+limpieza de textos
+extracción de referencias útiles
+marcación de errores o registros incompletos
+Resultado esperado:
+todos los movimientos bancarios y contables quedan listos para ser comparables.
+
+3.6 Motor de conciliación automática
+Objetivo: detectar coincidencias automáticas con distintos niveles de certeza.
+
+Funciones clave:
+
+ejecución de reglas automáticas
+matching exacto y flexible
+cálculo de score o confianza
+clasificación de resultados
+generación de propuestas de conciliación
+marcación de excepciones
+Resultado esperado:
+el sistema concilia automáticamente una parte significativa de movimientos y deja el resto preparado para revisión.
+
+3.7 Reglas de coincidencia
+Objetivo: permitir que la lógica de conciliación sea configurable y evolutiva.
+
+Funciones clave:
+
+reglas por empresa
+reglas por banco o cuenta
+prioridades de reglas
+tolerancias por fechas y valores
+coincidencia por referencia, concepto o tercero
+exclusiones y listas de excepciones
+Resultado esperado:
+la operación no depende de código para cada ajuste de negocio.
+
+3.8 Conciliación manual asistida
+Objetivo: resolver casos ambiguos o no conciliados con apoyo visual y funcional.
+
+Funciones clave:
+
+bandeja de pendientes
+sugerencias automáticas
+vista comparativa banco vs contabilidad
+filtros avanzados
+conciliación manual uno a uno, uno a muchos y muchos a uno
+registro obligatorio de motivo
+reversión controlada de conciliaciones
+Resultado esperado:
+el analista puede cerrar diferencias con rapidez y con evidencia.
+
+3.9 Reportes y dashboards
+Objetivo: entregar visibilidad operativa, financiera y de control.
+
+Reportes esperados:
+
+conciliaciones por período
+partidas conciliadas y no conciliadas
+diferencias por tipo
+antigüedad de pendientes
+productividad operativa
+trazabilidad de cambios
+exportación a Excel y PDF
+Dashboard esperado:
+
+estado general por empresa
+cuentas con más diferencias
+porcentaje de conciliación automática
+alertas operativas
+períodos abiertos y cerrados
+3.10 Auditoría y trazabilidad
+Objetivo: garantizar evidencia completa para control interno y auditoría.
+
+Funciones clave:
+
+bitácora de accesos
+historial de cargas
+cambios de configuración
+historial de conciliaciones manuales
+quién hizo qué, cuándo y desde dónde
+versionamiento lógico de resultados relevantes
+Resultado esperado:
+cada decisión y cambio queda trazable y defendible ante auditoría.
+
+3.11 Configuración avanzada
+Objetivo: permitir adaptación del sistema a distintos clientes, bancos y políticas internas.
+
+Funciones clave:
+
+catálogos parametrizables
+formatos de importación por banco
+reglas por cuenta o empresa
+tolerancias de conciliación
+estados operativos
+políticas de aprobación
+alertas y notificaciones
+Resultado esperado:
+la plataforma puede crecer sin rehacer su núcleo.
+
+4. Flujo funcional de alto nivel
+El flujo operativo recomendado es este:
+
+Crear empresa, usuarios, cuentas bancarias y parámetros.
+Cargar extractos bancarios.
+Cargar información contable.
+Validar y normalizar ambas fuentes.
+Ejecutar conciliación automática.
+Revisar coincidencias propuestas y pendientes.
+Resolver diferencias manualmente cuando aplique.
+Aprobar o cerrar conciliación del período.
+Emitir reportes y conservar trazabilidad completa.
+Este flujo es importante porque separa bien:
+
+ingestión
+transformación
+matching
+revisión
+cierre
+auditoría
+Eso ayuda mucho a mantener el sistema limpio y escalable.
+
+5. Reglas de negocio iniciales
+Estas son reglas funcionales que conviene asumir desde ahora:
+
+una conciliación siempre pertenece a una empresa, cuenta bancaria y período
+un movimiento bancario no debe quedar conciliado dos veces, salvo reversión formal
+un movimiento contable no debe quedar conciliado dos veces, salvo escenarios controlados de agrupación
+toda conciliación manual debe registrar usuario, fecha y motivo
+todo archivo cargado debe conservar evidencia de origen
+los registros inválidos no deben entrar al motor sin pasar por validación
+los cierres de período deberían poder bloquear edición posterior o exigir reapertura autorizada
+las reglas de matching deben ser parametrizables por empresa o cuenta
+6. Requerimientos no funcionales
+Para que esto sea empresarial de verdad, desde el análisis ya debemos fijar estos criterios:
+
+Seguridad: autenticación fuerte, autorización por roles, cifrado de secretos, bitácora de eventos
+Escalabilidad: arquitectura preparada para múltiples empresas, altos volúmenes y procesamiento por lotes
+Trazabilidad: toda acción crítica debe quedar auditada
+Usabilidad: interfaz clara para usuarios financieros, no solo técnica
+Mantenibilidad: módulos desacoplados, reglas configurables y código limpio
+Rendimiento: cargas masivas y conciliación eficiente
+Resiliencia: manejo robusto de errores y reintentos
+Compatibilidad: soporte flexible para formatos bancarios heterogéneos
+7. Riesgos funcionales que conviene controlar desde el inicio
+Veo estos puntos como críticos:
+
+alta variabilidad en formatos de bancos y ERPs
+referencias incompletas o inconsistentes
+movimientos agrupados o fraccionados
+fechas contables distintas a fechas bancarias
+duplicidad de cargas
+conciliaciones incorrectas por reglas demasiado agresivas
+necesidad de evidencia fuerte para auditoría
+crecimiento de complejidad si reglas y estados no se diseñan bien desde el principio
+La implicación práctica es clara: el motor debe ser potente, pero conservador. Mejor proponer coincidencias con score y revisión que “conciliar mal” automáticamente.
+
+8. Entregable funcional de esta etapa
+Con esta Etapa 1 queda definido:
+
+qué resuelve la plataforma
+qué módulos principales tendrá
+qué usuarios participarán
+cómo fluye la operación
+qué reglas de negocio base existen
+qué exigencias empresariales condicionan el diseño técnico
+Recomendación de dirección técnica
+Sin entrar todavía a la Etapa 2, te anticipo mi postura:
+
+Backend recomendado: FastAPI
+motivo preliminar: nos da una base más limpia y modular para API-first, procesamiento por servicios, integración futura, tipado fuerte, documentación automática y crecimiento hacia arquitectura desacoplada
+La justificación completa la desarrollaría formalmente en la Etapa 2, comparándolo contra Django en contexto de este producto.
+
+Siguiente paso
+Si apruebas esta base funcional, en el siguiente mensaje avanzamos con la Etapa 2: arquitectura robusta, donde voy a proponerte:
+
+stack definitivo
+estructura profesional de carpetas
+separación backend/frontend
+modelo de servicios
+estrategia de seguridad
+diseño de APIs
+flujo de datos
+escalabilidad, logs y manejo de errores
+Cuando me des luz verde, seguimos con la Etapa 2.
+
+8:20 a.m.
+Continúa con la Etapa 2: Arquitectura Empresarial.
+
+Define:
+
+- Arquitectura completa del sistema
+- Backend FastAPI
+- Frontend recomendado
+- PostgreSQL
+- Redis
+- Docker
+- Estructura profesional de carpetas
+- Patrón de diseño recomendado
+- APIs principales
+- Flujo de datos completo
+- Seguridad
+- Auditoría
+- Escalabilidad para miles de conciliaciones diarias
+
+No escribas código todavía.
+
+Quiero primero el diseño técnico detallado y el diagrama de componentes.
+
+Mostrar más
+8:24 a.m.
+Perfecto. Seguimos con la Etapa 2: Arquitectura Empresarial. Aquí ya aterrizamos la solución técnica completa, todavía sin escribir código.
+
+Voy a proponerte una arquitectura pensada para un sistema real de conciliación bancaria con estas metas: modularidad, trazabilidad, seguridad, buen rendimiento en cargas masivas y capacidad de crecer a miles de conciliaciones diarias.
+
+Etapa 2: Arquitectura Empresarial
+1. Decisión tecnológica principal
+Backend: FastAPI
+Elijo FastAPI sobre Django para este proyecto por estas razones:
+
+enfoque API-first, ideal para separar backend y frontend profesionalmente
+excelente soporte para tipado fuerte, validación y contratos claros
+muy adecuado para arquitectura modular y servicios de procesamiento
+documentación automática con OpenAPI/Swagger
+mejor encaje para procesos asincrónicos, colas, workers y servicios de conciliación
+menor acoplamiento que Django si queremos evolucionar a servicios especializados
+Cuándo Django habría sido mejor
+Django sería una buena opción si el foco principal fuera un backoffice monolítico con panel administrativo muy dominante desde el día 1. Pero en este caso el corazón del producto está en:
+
+procesamiento de archivos
+motor de conciliación
+reglas configurables
+UI moderna desacoplada
+escalabilidad operativa
+Por eso FastAPI encaja mejor.
+
+2. Frontend recomendado
+Recomendación: React + Next.js + TypeScript
+Propongo:
+
+Next.js como framework frontend
+TypeScript para mantener contratos estables con el backend
+Tailwind CSS para velocidad y consistencia visual
+React Query / TanStack Query para manejo de estado servidor
+Zustand o estado local simple para flujos UI
+tabla avanzada con AG Grid o TanStack Table para conciliación manual
+Motivo
+La conciliación bancaria necesita interfaces con:
+
+filtros complejos
+tablas densas
+comparaciones lado a lado
+acciones masivas
+experiencia fluida tipo aplicación empresarial
+Eso se resuelve mucho mejor con un frontend desacoplado y rico que con templates server-side clásicos.
+
+3. Arquitectura completa del sistema
+Enfoque recomendado: Monolito modular bien diseñado
+Para la primera versión empresarial, recomiendo un monolito modular y no microservicios desde el inicio.
+
+Razón
+Los microservicios demasiado pronto suelen introducir:
+
+más complejidad operativa
+observabilidad más difícil
+más fricción en desarrollo
+consistencia transaccional más compleja
+En cambio, un monolito modular nos da:
+
+velocidad de construcción
+menor complejidad de despliegue
+límites de dominio claros
+posibilidad de extraer servicios después si el volumen lo exige
+Componentes base
+Frontend web: Next.js
+API Backend: FastAPI
+Base de datos: PostgreSQL
+Cache / colas ligeras / locks: Redis
+Procesamiento asíncrono: Celery o RQ
+Workers: para importación, normalización, conciliación y generación de reportes
+Object storage futuro: S3/MinIO para archivos si el volumen crece
+Docker: desarrollo y despliegue consistente
+Nginx o Traefik: reverse proxy
+Logs / observabilidad: estructura preparada desde el inicio
+4. Diagrama de componentes
++---------------------------+
+|        Usuarios Web       |
+| Analista / Supervisor /   |
+| Admin / Auditor           |
++------------+--------------+
+             |
+             v
++---------------------------+
+|     Frontend Next.js      |
+| UI empresarial responsive |
+| dashboard, carga, revisión|
+| reportes, administración  |
++------------+--------------+
+             |
+             v
++---------------------------+
+|   API Gateway / FastAPI   |
+| Auth, RBAC, validación,   |
+| endpoints, auditoría,     |
+| orquestación de dominio   |
++-----+----------+----------+
+      |          | 
+      |          |
+      v          v
++-----------+  +------------------+
+| PostgreSQL|  |      Redis       |
+| datos core|  | cache, locks,    |
+| negocio   |  | colas, sesiones  |
++-----------+  +------------------+
+      ^                 |
+      |                 v
+      |         +------------------+
+      |         | Workers Async    |
+      |         | importación      |
+      |         | normalización    |
+      |         | conciliación     |
+      |         | reportes         |
+      |         +--------+---------+
+      |                  |
+      |                  v
+      |         +------------------+
+      |         | Servicios de     |
+      |         | dominio interno  |
+      |         | parser engine    |
+      |         | matching engine  |
+      |         | reporting engine |
+      |         +------------------+
+      |
+      v
++---------------------------+
+| Auditoría / Logs / Alertas|
+| eventos, trazas, errores  |
++---------------------------+
+5. Estilo arquitectónico interno
+Patrón recomendado
+Propongo una combinación de:
+
+Arquitectura en capas
+Domain-driven modular design ligero
+Service layer
+Repository pattern
+Unit of Work en operaciones críticas
+Event-driven interno para auditoría y procesos asíncronos
+Capas
+Presentation layer
+
+routers FastAPI
+DTOs
+validación de entrada
+serialización de salida
+Application layer
+
+casos de uso
+orquestación de flujos
+políticas transaccionales
+autorización contextual
+Domain layer
+
+entidades del negocio
+reglas de conciliación
+lógica de matching
+estados y transiciones
+Infrastructure layer
+
+ORM
+PostgreSQL
+Redis
+almacenamiento de archivos
+colas
+logging
+proveedores externos
+Beneficio
+Esto evita mezclar:
+
+reglas de negocio
+acceso a datos
+detalles del framework
+lógica de UI
+Y deja el sistema mucho más mantenible.
+
+6. Módulos técnicos del backend
+Cada módulo funcional debería vivir como un bounded module dentro del backend.
+
+Módulos principales
+auth
+users
+roles_permissions
+companies
+banks
+bank_accounts
+file_ingestion
+statement_imports
+ledger_imports
+normalization
+reconciliation_rules
+reconciliation_engine
+manual_reconciliation
+differences
+reports
+audit
+notifications
+settings
+7. Estructura profesional de carpetas
+Backend
+backend/
+  app/
+    api/
+      v1/
+        routers/
+        dependencies/
+        schemas/
+    core/
+      config/
+      security/
+      database/
+      logging/
+      exceptions/
+      middleware/
+    modules/
+      auth/
+        api/
+        application/
+        domain/
+        infrastructure/
+      companies/
+        api/
+        application/
+        domain/
+        infrastructure/
+      banks/
+      file_ingestion/
+      normalization/
+      reconciliation/
+      reports/
+      audit/
+      settings/
+    shared/
+      enums/
+      dto/
+      utils/
+      events/
+      mixins/
+    workers/
+      tasks/
+      jobs/
+    tests/
+      unit/
+      integration/
+      e2e/
+    main.py
+Frontend
+frontend/
+  src/
+    app/
+    modules/
+      auth/
+      dashboard/
+      uploads/
+      reconciliation/
+      reports/
+      admin/
+    components/
+      ui/
+      tables/
+      forms/
+      layout/
+    services/
+      api/
+      hooks/
+    lib/
+      auth/
+      utils/
+      validators/
+    styles/
+    tests/
+Infraestructura
+infra/
+  docker/
+  nginx/
+  scripts/
+  db/
+    migrations/
+    seeds/
+  monitoring/
+  docs/
+8. PostgreSQL: papel dentro de la arquitectura
+PostgreSQL será la base transaccional principal.
+
+Por qué PostgreSQL
+excelente integridad relacional
+muy buen rendimiento para consultas complejas
+soporte fuerte para índices, JSONB y particionamiento
+adecuado para auditoría y reporting operativo
+maduro y confiable para entorno empresarial
+Qué guardar allí
+empresas, usuarios, roles
+cuentas y configuraciones
+extractos y libros cargados
+movimientos normalizados
+reglas de conciliación
+conciliaciones y diferencias
+estados de aprobación
+auditoría y bitácora operativa
+9. Redis: rol recomendado
+Redis no reemplaza la base de datos. Lo usamos como soporte operativo.
+
+Usos principales
+cola de tareas para procesamiento asíncrono
+cache de consultas frecuentes
+control de locks distribuidos
+throttling y rate limiting
+almacenamiento temporal de progreso de carga
+sesiones efímeras si se requiere
+idempotencia temporal en operaciones sensibles
+Casos concretos
+evitar procesar dos veces el mismo archivo simultáneamente
+guardar estado “importando / normalizando / conciliando”
+cachear dashboard ejecutivo
+serializar tareas de conciliación por cuenta/período
+10. Docker: estrategia recomendada
+Docker debe estar desde el inicio.
+
+Contenedores base
+frontend
+backend
+postgres
+redis
+worker
+scheduler si usamos tareas programadas
+nginx opcional para integración
+Beneficios
+entorno local homogéneo
+onboarding más simple
+despliegue reproducible
+separación clara de responsabilidades
+11. APIs principales
+Las APIs deben diseñarse por dominio, versionadas, y con contratos estrictos.
+
+Autenticación y seguridad
+POST /api/v1/auth/login
+POST /api/v1/auth/refresh
+POST /api/v1/auth/logout
+GET /api/v1/auth/me
+Empresas y administración
+GET /api/v1/companies
+POST /api/v1/companies
+GET /api/v1/companies/{id}
+PATCH /api/v1/companies/{id}
+Usuarios, roles y permisos
+GET /api/v1/users
+POST /api/v1/users
+PATCH /api/v1/users/{id}
+GET /api/v1/roles
+POST /api/v1/roles
+Bancos y cuentas
+GET /api/v1/banks
+POST /api/v1/bank-accounts
+GET /api/v1/bank-accounts
+PATCH /api/v1/bank-accounts/{id}
+Carga de archivos
+POST /api/v1/uploads/bank-statements
+POST /api/v1/uploads/ledger-files
+GET /api/v1/uploads/{id}/status
+GET /api/v1/uploads/{id}/preview
+POST /api/v1/uploads/{id}/confirm
+Normalización
+POST /api/v1/normalizations/{upload_id}/run
+GET /api/v1/normalizations/{upload_id}/result
+GET /api/v1/normalizations/{upload_id}/errors
+Reglas de conciliación
+GET /api/v1/reconciliation-rules
+POST /api/v1/reconciliation-rules
+PATCH /api/v1/reconciliation-rules/{id}
+POST /api/v1/reconciliation-rules/{id}/activate
+Conciliación
+POST /api/v1/reconciliations/run
+GET /api/v1/reconciliations
+GET /api/v1/reconciliations/{id}
+GET /api/v1/reconciliations/{id}/summary
+GET /api/v1/reconciliations/{id}/matches
+GET /api/v1/reconciliations/{id}/differences
+Conciliación manual
+POST /api/v1/reconciliations/{id}/manual-match
+POST /api/v1/reconciliations/{id}/unmatch
+POST /api/v1/reconciliations/{id}/approve
+POST /api/v1/reconciliations/{id}/reject
+POST /api/v1/reconciliations/{id}/comment
+Reportes
+GET /api/v1/reports/dashboard
+GET /api/v1/reports/reconciliations
+POST /api/v1/reports/export/excel
+POST /api/v1/reports/export/pdf
+Auditoría
+GET /api/v1/audit/events
+GET /api/v1/audit/reconciliation-history/{id}
+GET /api/v1/audit/uploads/{id}
+12. Flujo de datos completo
+Flujo principal
+El usuario inicia sesión.
+El frontend obtiene permisos y contexto de empresa.
+El usuario carga archivo bancario o contable.
+Backend registra metadatos del archivo y lo almacena.
+Se dispara tarea asíncrona de parsing.
+El parser interpreta el formato y genera registros staging.
+El normalizador limpia y estandariza datos.
+Si hay errores, se generan observaciones y se detiene confirmación.
+Si pasa validación, los movimientos se consolidan en tablas operativas.
+El usuario ejecuta conciliación para empresa/cuenta/período.
+Se lanza worker del motor de conciliación.
+El motor aplica reglas por prioridad.
+Genera matches, diferencias, score y estados.
+El frontend muestra resumen y pendientes.
+El analista revisa y corrige manualmente.
+El supervisor aprueba cierre si aplica.
+Se genera reporte y se conserva auditoría completa.
+13. Diseño de procesamiento interno
+Pipeline recomendado
+Separar en etapas técnicas:
+
+ingestión
+staging
+validación
+normalización
+matching
+resolución manual
+cierre
+reporting
+Muy importante
+No cargar directamente al modelo final desde el archivo crudo. Debe existir zona de staging para:
+
+inspección
+reintentos
+trazabilidad
+corrección controlada
+reproducibilidad
+14. Seguridad
+La seguridad aquí no es un extra. Es estructural.
+
+Autenticación
+JWT con access token y refresh token
+expiración corta para access token
+refresh rotation
+invalidación de sesiones al cambiar credenciales críticas
+MFA opcional desde etapa posterior, pero arquitectura preparada
+Autorización
+RBAC por roles y permisos
+aislamiento estricto por empresa
+validación contextual en backend, no solo en frontend
+permisos por acción: ver, cargar, ejecutar, aprobar, exportar, administrar
+Seguridad de datos
+contraseñas con hashing fuerte (argon2 o bcrypt)
+secretos en variables de entorno
+cifrado en tránsito con HTTPS
+cifrado de respaldos y almacenamiento sensible cuando aplique
+validación estricta de archivos subidos
+antivirus o escaneo posterior si el entorno lo requiere
+Seguridad de archivos
+lista blanca de extensiones y MIME types
+límite de tamaño
+nombre de archivo sanitizado
+almacenamiento separado del path público
+no confiar en el nombre del archivo como fuente de verdad
+Seguridad de aplicación
+rate limiting
+protección contra IDOR
+validación de ownership por empresa
+sanitización de entradas
+CORS controlado
+headers de seguridad
+prevención de enumeración de usuarios
+bitácora de eventos sensibles
+15. Auditoría
+Qué debe auditarse
+inicio y cierre de sesión
+intentos fallidos
+creación y modificación de usuarios, roles, reglas y configuraciones
+carga, validación y confirmación de archivos
+ejecuciones de conciliación
+conciliaciones manuales y reversos
+aprobaciones y cierres de período
+exportaciones de reportes
+Modelo de auditoría
+Cada evento debería guardar:
+
+fecha/hora
+usuario
+empresa
+módulo
+acción
+entidad afectada
+id de entidad
+valores anteriores y nuevos cuando aplique
+IP / user-agent si aplica
+resultado: éxito o error
+Enfoque técnico
+middleware para eventos globales
+eventos explícitos desde casos de uso críticos
+tabla de auditoría estructurada
+logs técnicos separados de logs funcionales
+16. Escalabilidad para miles de conciliaciones diarias
+Enfoque general
+Miles de conciliaciones diarias son totalmente viables si diseñamos bien estas piezas:
+
+1. Procesamiento asíncrono
+Las cargas, normalizaciones, conciliaciones y reportes no deben bloquear peticiones HTTP.
+
+2. Particionamiento lógico
+Aislar por:
+
+empresa
+cuenta bancaria
+período
+lote de importación
+3. Índices correctos en PostgreSQL
+Especialmente en:
+
+empresa_id
+cuenta_bancaria_id
+fecha_movimiento
+valor
+referencia normalizada
+estado_conciliacion
+reconciliation_run_id
+4. Batch processing
+Procesar movimientos por lotes en vez de fila a fila.
+
+5. Idempotencia
+Evitar reprocesamientos accidentales de:
+
+archivos
+tareas
+conciliaciones del mismo lote
+6. Caching selectivo
+No cachear transacciones sensibles sin criterio. Sí cachear:
+
+catálogos
+dashboard consolidado
+conteos y métricas
+7. Workers escalables horizontalmente
+Poder subir más workers para:
+
+parser
+normalización
+matching
+generación de reportes
+8. Separación futura si el volumen lo exige
+A futuro se puede extraer el motor de conciliación como servicio independiente, pero no hace falta al inicio.
+
+17. Estrategia de logs y observabilidad
+Tipos de logs
+logs técnicos: errores, performance, excepciones
+logs funcionales: cargas, conciliaciones, reglas aplicadas
+logs de seguridad: accesos, bloqueos, permisos denegados
+Recomendación
+Usar logs estructurados JSON para facilitar integración futura con:
+
+ELK
+Grafana Loki
+Datadog
+CloudWatch
+Métricas clave
+tiempo de carga de archivos
+tiempo de normalización
+tiempo de conciliación por lote
+porcentaje de conciliación automática
+tasa de errores por tipo de archivo
+reglas más utilizadas
+volumen por empresa y período
+18. Manejo de errores
+Principios
+errores de usuario claros y accionables
+errores técnicos trazables sin exponer detalles sensibles
+correlación por request_id o trace_id
+reintentos controlados en tareas async
+estados consistentes aunque falle un paso intermedio
+Categorías
+validación de entrada
+formato de archivo inválido
+inconsistencias de negocio
+permisos insuficientes
+error de infraestructura
+conflicto de concurrencia
+error interno no controlado
+19. Recomendación de patrón de diseño por zonas
+Backend
+Repository Pattern para persistencia
+Service Layer para casos de uso
+Strategy Pattern para reglas de conciliación
+Factory Pattern para parsers de archivos por banco/formato
+State Pattern o máquina de estados ligera para ciclo de conciliación
+Specification Pattern si las reglas de matching crecen mucho
+Motor de conciliación
+El motor debería usar:
+
+estrategias encadenadas
+scoring por regla
+priorización configurable
+resolución de conflictos entre matches
+20. Diagrama lógico por módulos
+[Auth y Seguridad]
+    |
+    +--> autenticación
+    +--> roles/permisos
+    +--> sesiones y tokens
+
+[Administración]
+    |
+    +--> empresas
+    +--> usuarios
+    +--> bancos
+    +--> cuentas
+    +--> configuración
+
+[Ingesta]
+    |
+    +--> carga archivo banco
+    +--> carga archivo contable
+    +--> staging
+    +--> validación
+
+[Normalización]
+    |
+    +--> homologación campos
+    +--> limpieza texto
+    +--> estandarización importes/fechas
+    +--> errores de calidad
+
+[Conciliación]
+    |
+    +--> reglas
+    +--> matching automático
+    +--> score
+    +--> diferencias
+    +--> pendientes
+
+[Revisión Manual]
+    |
+    +--> comparación banco vs contabilidad
+    +--> conciliación asistida
+    +--> comentarios
+    +--> aprobación/reversión
+
+[Reportes]
+    |
+    +--> dashboard
+    +--> exportaciones
+    +--> indicadores
+    +--> histórico
+
+[Auditoría]
+    |
+    +--> eventos funcionales
+    +--> seguridad
+    +--> cambios de configuración
+    +--> trazabilidad completa
+21. Recomendación final de arquitectura
+La arquitectura que recomiendo formalmente para este proyecto es:
+
+Frontend: Next.js + TypeScript
+Backend: FastAPI
+Base de datos: PostgreSQL
+Cache / locks / soporte async: Redis
+Workers: Celery
+Contenedorización: Docker
+Estilo: monolito modular con separación por dominio
+Persistencia: PostgreSQL con staging + operativo + auditoría
+Seguridad: JWT + RBAC + aislamiento por empresa + logs de seguridad
+Escalabilidad: workers horizontales, procesos asíncronos, índices correctos, lotes y cache selectivo
+Cierre de esta etapa
+Con esta Etapa 2 ya queda definido:
+
+la arquitectura técnica completa
+el stack recomendado
+la estructura profesional del proyecto
+el patrón de diseño
+los componentes principales
+las APIs base
+el flujo de datos
+la estrategia de seguridad, auditoría y escalabilidad
+El siguiente paso natural es la Etapa 3: modelo de datos, donde vamos a diseñar las tablas, relaciones, claves y campos empresariales con criterio de producción. Ahí dejaremos lista la base para que luego la Fase 1 no nazca débil.
+
+8:24 a.m.
+Continúa con la Etapa 3.
+
+Diseña el modelo de datos completo para conciliación bancaria empresarial.
+
+Genera:
+- Diagrama ER
+- Tablas
+- Relaciones
+- Índices
+- Claves foráneas
+- Estrategia de particionamiento
+- Auditoría
+
+No escribas código todavía.
+8:26 a.m.
+Perfecto. Vamos con la Etapa 3: modelo de datos. Aquí definimos una base relacional pensada para operación empresarial real: multiempresa, trazable, auditable, preparada para volumen y con buen soporte para conciliación automática y manual.
+
+No voy a escribir código todavía. Te dejo el diseño lógico y físico recomendado.
+
+Etapa 3: Modelo de Datos
+1. Objetivos del modelo
+El modelo de datos debe resolver bien estos problemas:
+
+aislamiento por empresa
+trazabilidad completa de cargas, normalización y conciliación
+soporte para múltiples bancos y cuentas
+soporte para distintos formatos de origen
+conciliación uno a uno, uno a muchos y muchos a uno
+manejo de diferencias, excepciones y aprobaciones
+operación eficiente sobre altos volúmenes
+auditoría funcional y de seguridad
+2. Enfoque general del modelo
+Capas de datos recomendadas
+Propongo dividir el dominio en 5 zonas:
+
+Seguridad y administración
+
+empresas, usuarios, roles, permisos
+Configuración operativa
+
+bancos, cuentas bancarias, formatos, reglas, parámetros
+Ingesta y staging
+
+archivos cargados, lotes, registros crudos, errores de validación
+Operación de conciliación
+
+movimientos bancarios, movimientos contables, ejecuciones, matches, diferencias
+Auditoría y trazabilidad
+
+eventos, historial de cambios, acciones de usuario, exportaciones
+3. Diagrama ER de alto nivel
+EMPRESA
+  |--< USUARIO_EMPRESA >-- USUARIO --< USUARIO_ROL >-- ROL --< ROL_PERMISO >-- PERMISO
+  |
+  |--< CUENTA_BANCARIA >-- BANCO
+  |
+  |--< ARCHIVO_CARGADO
+  |      |--< LOTE_IMPORTACION
+  |      |      |--< ERROR_IMPORTACION
+  |
+  |--< EXTRACTO_BANCARIO
+  |      |--< MOVIMIENTO_BANCARIO
+  |
+  |--< LIBRO_CONTABLE
+  |      |--< MOVIMIENTO_CONTABLE
+  |
+  |--< REGLA_CONCILIACION
+  |
+  |--< EJECUCION_CONCILIACION
+         |--< RESULTADO_CONCILIACION
+         |      |--< RESULTADO_CONCILIACION_BANCO >-- MOVIMIENTO_BANCARIO
+         |      |--< RESULTADO_CONCILIACION_CONTABLE >-- MOVIMIENTO_CONTABLE
+         |
+         |--< DIFERENCIA_CONCILIACION
+         |--< COMENTARIO_CONCILIACION
+         |--< HISTORIAL_CONCILIACION
+
+ESTADO
+  |-- referenciado por múltiples entidades operativas
+
+AUDITORIA_EVENTO
+AUDITORIA_CAMBIO
+4. Tablas principales
+4.1 Empresas
+companies
+Representa cada empresa o unidad de negocio.
+
+Campos recomendados
+
+id UUID PK
+code varchar(50) unique
+legal_name varchar(255)
+trade_name varchar(255) nullable
+tax_id varchar(50)
+country_code varchar(10)
+base_currency varchar(10)
+timezone varchar(50)
+date_format varchar(20)
+status varchar(20)
+created_at timestamptz
+updated_at timestamptz
+created_by UUID nullable
+updated_by UUID nullable
+Índices
+
+unique code
+index tax_id
+index status
+4.2 Usuarios
+users
+Usuario global del sistema.
+
+Campos
+
+id UUID PK
+email varchar(255) unique
+username varchar(100) unique
+full_name varchar(255)
+password_hash varchar(255)
+is_active boolean
+is_superuser boolean
+last_login_at timestamptz nullable
+failed_login_attempts int
+locked_until timestamptz nullable
+created_at timestamptz
+updated_at timestamptz
+Índices
+
+unique email
+unique username
+index is_active
+roles
+Define perfiles funcionales.
+
+Campos
+
+id UUID PK
+name varchar(100)
+code varchar(50) unique
+description text nullable
+is_system boolean
+created_at timestamptz
+Índices
+
+unique code
+permissions
+Catálogo de permisos.
+
+Campos
+
+id UUID PK
+module varchar(100)
+action varchar(50)
+code varchar(150) unique
+description text nullable
+Índices
+
+unique code
+index (module, action)
+role_permissions
+Relación N:M.
+
+Campos
+
+role_id UUID FK -> roles.id
+permission_id UUID FK -> permissions.id
+PK
+
+compuesta (role_id, permission_id)
+user_roles
+Relación N:M usuario-rol.
+
+Campos
+
+id UUID PK
+user_id UUID FK -> users.id
+role_id UUID FK -> roles.id
+company_id UUID FK -> companies.id nullable
+assigned_at timestamptz
+assigned_by UUID nullable
+Índices
+
+index user_id
+index role_id
+index company_id
+unique (user_id, role_id, company_id)
+user_companies
+Acceso de usuario a empresas.
+
+Campos
+
+id UUID PK
+user_id UUID FK -> users.id
+company_id UUID FK -> companies.id
+is_default boolean
+status varchar(20)
+created_at timestamptz
+Índices
+
+unique (user_id, company_id)
+index company_id
+5. Bancos y cuentas
+5.1 Bancos
+banks
+Catálogo de bancos.
+
+Campos
+
+id UUID PK
+country_code varchar(10)
+name varchar(255)
+code varchar(50)
+swift_code varchar(30) nullable
+status varchar(20)
+created_at timestamptz
+Índices
+
+unique (country_code, code)
+index name
+5.2 Cuentas bancarias
+bank_accounts
+Cuentas bancarias por empresa.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+bank_id UUID FK -> banks.id
+account_number_masked varchar(100)
+account_number_hash varchar(255)
+account_type varchar(30)
+currency varchar(10)
+description varchar(255) nullable
+branch_name varchar(255) nullable
+status varchar(20)
+opened_at date nullable
+closed_at date nullable
+created_at timestamptz
+updated_at timestamptz
+Índices
+
+index company_id
+index bank_id
+index (company_id, status)
+unique (company_id, bank_id, account_number_hash)
+6. Ingesta y staging
+6.1 Archivos cargados
+uploaded_files
+Registro maestro de archivos subidos.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+uploaded_by UUID FK -> users.id
+file_type varchar(30)
+valores: bank_statement, ledger, rule_import, other
+source_name varchar(255)
+stored_name varchar(255)
+storage_path varchar(500)
+mime_type varchar(100)
+extension varchar(20)
+size_bytes bigint
+checksum_sha256 varchar(64)
+upload_status varchar(30)
+uploaded_at timestamptz
+validated_at timestamptz nullable
+metadata_json jsonb nullable
+Índices
+
+index company_id
+index uploaded_by
+index file_type
+index upload_status
+unique (company_id, checksum_sha256, file_type)
+6.2 Lotes de importación
+import_batches
+Cada procesamiento de archivo genera un lote.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+uploaded_file_id UUID FK -> uploaded_files.id
+batch_type varchar(30)
+source_system varchar(100) nullable
+target_entity varchar(50)
+status varchar(30)
+total_rows int default 0
+valid_rows int default 0
+invalid_rows int default 0
+duplicate_rows int default 0
+started_at timestamptz nullable
+finished_at timestamptz nullable
+created_at timestamptz
+created_by UUID FK -> users.id
+Índices
+
+index company_id
+index uploaded_file_id
+index status
+index (company_id, batch_type, created_at)
+6.3 Errores de importación
+import_errors
+Errores por fila o por regla de validación.
+
+Campos
+
+id UUID PK
+batch_id UUID FK -> import_batches.id
+row_number int nullable
+field_name varchar(100) nullable
+error_code varchar(50)
+error_message text
+raw_value text nullable
+severity varchar(20)
+created_at timestamptz
+Índices
+
+index batch_id
+index error_code
+index severity
+6.4 Staging bancario
+stg_bank_transactions
+Zona temporal normalizable.
+
+Campos
+
+id UUID PK
+batch_id UUID FK -> import_batches.id
+company_id UUID FK -> companies.id
+bank_account_id UUID FK -> bank_accounts.id
+row_number int
+raw_date varchar(50) nullable
+raw_description text nullable
+raw_reference varchar(255) nullable
+raw_debit varchar(100) nullable
+raw_credit varchar(100) nullable
+raw_amount varchar(100) nullable
+raw_balance varchar(100) nullable
+raw_data_json jsonb
+normalization_status varchar(30)
+error_flag boolean
+created_at timestamptz
+Índices
+
+index batch_id
+index company_id
+index bank_account_id
+index normalization_status
+6.5 Staging contable
+stg_ledger_transactions
+Zona temporal de movimientos contables.
+
+Campos
+
+id UUID PK
+batch_id UUID FK -> import_batches.id
+company_id UUID FK -> companies.id
+row_number int
+raw_date varchar(50) nullable
+raw_entry_number varchar(100) nullable
+raw_account_code varchar(100) nullable
+raw_description text nullable
+raw_reference varchar(255) nullable
+raw_debit varchar(100) nullable
+raw_credit varchar(100) nullable
+raw_amount varchar(100) nullable
+raw_third_party varchar(255) nullable
+raw_cost_center varchar(100) nullable
+raw_data_json jsonb
+normalization_status varchar(30)
+error_flag boolean
+created_at timestamptz
+Índices
+
+index batch_id
+index company_id
+index normalization_status
+7. Operación bancaria y contable
+7.1 Extractos bancarios
+bank_statements
+Cabecera de extracto bancario importado.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+bank_account_id UUID FK -> bank_accounts.id
+uploaded_file_id UUID FK -> uploaded_files.id
+import_batch_id UUID FK -> import_batches.id
+statement_number varchar(100) nullable
+period_start date
+period_end date
+opening_balance numeric(18,2) nullable
+closing_balance numeric(18,2) nullable
+currency varchar(10)
+status varchar(30)
+created_at timestamptz
+created_by UUID FK -> users.id
+Índices
+
+index company_id
+index bank_account_id
+index (bank_account_id, period_start, period_end)
+unique (bank_account_id, statement_number, period_start, period_end)
+7.2 Movimientos bancarios
+bank_transactions
+Movimiento bancario normalizado.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+bank_statement_id UUID FK -> bank_statements.id
+bank_account_id UUID FK -> bank_accounts.id
+transaction_date date
+posting_date date nullable
+value_date date nullable
+reference varchar(255) nullable
+reference_normalized varchar(255) nullable
+description text
+description_normalized text nullable
+counterparty_name varchar(255) nullable
+counterparty_name_normalized varchar(255) nullable
+transaction_type varchar(30)
+debit_amount numeric(18,2) default 0
+credit_amount numeric(18,2) default 0
+net_amount numeric(18,2)
+balance_after numeric(18,2) nullable
+currency varchar(10)
+external_transaction_id varchar(150) nullable
+duplicate_group_key varchar(255) nullable
+reconciliation_status varchar(30)
+source_batch_id UUID FK -> import_batches.id
+created_at timestamptz
+updated_at timestamptz
+Índices
+
+index company_id
+index bank_statement_id
+index bank_account_id
+index transaction_date
+index net_amount
+index reconciliation_status
+index (bank_account_id, transaction_date)
+index (bank_account_id, net_amount)
+index (reference_normalized)
+index (source_batch_id)
+opcional trigram index sobre description_normalized
+unique parcial según estrategia de deduplicación, no estricta al inicio
+7.3 Libros contables
+ledger_books
+Cabecera de lote contable importado.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+uploaded_file_id UUID FK -> uploaded_files.id
+import_batch_id UUID FK -> import_batches.id
+source_system varchar(100) nullable
+book_type varchar(50)
+period_start date
+period_end date
+currency varchar(10)
+status varchar(30)
+created_at timestamptz
+created_by UUID FK -> users.id
+Índices
+
+index company_id
+index (company_id, period_start, period_end)
+index status
+7.4 Movimientos contables
+ledger_transactions
+Movimiento contable normalizado.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+ledger_book_id UUID FK -> ledger_books.id
+transaction_date date
+posting_date date nullable
+entry_number varchar(100) nullable
+voucher_number varchar(100) nullable
+account_code varchar(100)
+account_name varchar(255) nullable
+reference varchar(255) nullable
+reference_normalized varchar(255) nullable
+description text
+description_normalized text nullable
+third_party_name varchar(255) nullable
+third_party_name_normalized varchar(255) nullable
+cost_center varchar(100) nullable
+debit_amount numeric(18,2) default 0
+credit_amount numeric(18,2) default 0
+net_amount numeric(18,2)
+currency varchar(10)
+bank_account_id UUID FK -> bank_accounts.id nullable
+reconciliation_status varchar(30)
+source_batch_id UUID FK -> import_batches.id
+created_at timestamptz
+updated_at timestamptz
+Índices
+
+index company_id
+index ledger_book_id
+index transaction_date
+index account_code
+index net_amount
+index bank_account_id
+index reconciliation_status
+index (company_id, account_code, transaction_date)
+index (bank_account_id, net_amount)
+index (reference_normalized)
+trigram opcional en description_normalized
+8. Reglas y configuración de conciliación
+8.1 Reglas de conciliación
+reconciliation_rules
+Reglas configurables por empresa.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+name varchar(150)
+description text nullable
+scope varchar(30)
+valores: global_company, bank_account, ledger_account, custom
+bank_account_id UUID FK -> bank_accounts.id nullable
+priority int
+match_type varchar(50)
+valores: exact, date_range, text_similarity, one_to_many, many_to_one, hybrid
+date_tolerance_days int nullable
+amount_tolerance numeric(18,2) nullable
+min_confidence_score numeric(5,2) nullable
+requires_reference_match boolean
+requires_description_match boolean
+requires_manual_approval boolean
+is_active boolean
+config_json jsonb
+created_at timestamptz
+updated_at timestamptz
+created_by UUID FK -> users.id
+Índices
+
+index company_id
+index bank_account_id
+index is_active
+index (company_id, priority, is_active)
+9. Ejecución de conciliación
+9.1 Ejecuciones
+reconciliation_runs
+Cada corrida del motor.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id
+bank_account_id UUID FK -> bank_accounts.id
+period_start date
+period_end date
+run_type varchar(30)
+valores: automatic, reprocess, manual_assisted
+status varchar(30)
+valores: pending, running, completed, failed, approved, closed
+total_bank_transactions int default 0
+total_ledger_transactions int default 0
+matched_count int default 0
+unmatched_bank_count int default 0
+unmatched_ledger_count int default 0
+difference_count int default 0
+started_at timestamptz nullable
+finished_at timestamptz nullable
+triggered_by UUID FK -> users.id
+approved_by UUID FK -> users.id nullable
+approved_at timestamptz nullable
+closed_by UUID FK -> users.id nullable
+closed_at timestamptz nullable
+notes text nullable
+created_at timestamptz
+Índices
+
+index company_id
+index bank_account_id
+index status
+index (company_id, bank_account_id, period_start, period_end)
+index (company_id, created_at)
+9.2 Resultados de conciliación
+reconciliation_results
+Cabecera de match o propuesta de match.
+
+Campos
+
+id UUID PK
+reconciliation_run_id UUID FK -> reconciliation_runs.id
+company_id UUID FK -> companies.id
+match_mode varchar(30)
+valores: automatic, suggested, manual
+match_structure varchar(30)
+valores: one_to_one, one_to_many, many_to_one, many_to_many
+status varchar(30)
+valores: suggested, confirmed, rejected, reversed
+confidence_score numeric(5,2)
+matched_amount numeric(18,2)
+difference_amount numeric(18,2) default 0
+matched_date date nullable
+rule_id UUID FK -> reconciliation_rules.id nullable
+justification text nullable
+confirmed_by UUID FK -> users.id nullable
+confirmed_at timestamptz nullable
+rejected_by UUID FK -> users.id nullable
+rejected_at timestamptz nullable
+created_at timestamptz
+updated_at timestamptz
+Índices
+
+index reconciliation_run_id
+index company_id
+index status
+index match_mode
+index rule_id
+index confidence_score
+9.3 Relación resultado - movimientos bancarios
+reconciliation_result_bank_transactions
+N:M entre resultado y movimientos bancarios.
+
+Campos
+
+id UUID PK
+reconciliation_result_id UUID FK -> reconciliation_results.id
+bank_transaction_id UUID FK -> bank_transactions.id
+amount_applied numeric(18,2)
+created_at timestamptz
+Índices
+
+unique (reconciliation_result_id, bank_transaction_id)
+index bank_transaction_id
+9.4 Relación resultado - movimientos contables
+reconciliation_result_ledger_transactions
+N:M entre resultado y movimientos contables.
+
+Campos
+
+id UUID PK
+reconciliation_result_id UUID FK -> reconciliation_results.id
+ledger_transaction_id UUID FK -> ledger_transactions.id
+amount_applied numeric(18,2)
+created_at timestamptz
+Índices
+
+unique (reconciliation_result_id, ledger_transaction_id)
+index ledger_transaction_id
+10. Diferencias y excepciones
+10.1 Diferencias
+reconciliation_differences
+Diferencias detectadas por el motor o por revisión manual.
+
+Campos
+
+id UUID PK
+reconciliation_run_id UUID FK -> reconciliation_runs.id
+company_id UUID FK -> companies.id
+difference_type varchar(50)
+ejemplos: missing_in_bank, missing_in_ledger, amount_mismatch, date_mismatch, reference_mismatch, duplicate_suspected
+severity varchar(20)
+bank_transaction_id UUID FK -> bank_transactions.id nullable
+ledger_transaction_id UUID FK -> ledger_transactions.id nullable
+detected_amount numeric(18,2) nullable
+expected_amount numeric(18,2) nullable
+difference_amount numeric(18,2) nullable
+description text
+status varchar(30)
+valores: open, in_review, resolved, ignored
+resolution_type varchar(50) nullable
+resolved_by UUID FK -> users.id nullable
+resolved_at timestamptz nullable
+resolution_note text nullable
+created_at timestamptz
+Índices
+
+index reconciliation_run_id
+index company_id
+index difference_type
+index status
+index severity
+10.2 Comentarios y notas
+reconciliation_comments
+Comentarios operativos.
+
+Campos
+
+id UUID PK
+reconciliation_run_id UUID FK -> reconciliation_runs.id
+reconciliation_result_id UUID FK -> reconciliation_results.id nullable
+difference_id UUID FK -> reconciliation_differences.id nullable
+company_id UUID FK -> companies.id
+comment_type varchar(30)
+comment_text text
+created_by UUID FK -> users.id
+created_at timestamptz
+Índices
+
+index reconciliation_run_id
+index reconciliation_result_id
+index difference_id
+index company_id
+10.3 Historial de conciliación
+reconciliation_history
+Bitácora funcional del ciclo de conciliación.
+
+Campos
+
+id UUID PK
+reconciliation_run_id UUID FK -> reconciliation_runs.id
+action varchar(50)
+ejemplos: run_started, rule_applied, match_confirmed, match_rejected, manual_match_created, approved, closed, reopened
+entity_type varchar(50) nullable
+entity_id UUID nullable
+performed_by UUID FK -> users.id nullable
+details_json jsonb nullable
+created_at timestamptz
+Índices
+
+index reconciliation_run_id
+index action
+index performed_by
+index created_at
+11. Estados
+Recomendación
+No crear una sola tabla genérica de estados para todo. En sistema empresarial eso suele volver las reglas poco claras.
+
+Mejor enfoque
+usar columnas status tipificadas por dominio
+complementar con catálogos si luego necesitas parametrización visual
+Aun así, sí conviene tener algunos catálogos.
+
+status_catalog
+Campos
+
+id UUID PK
+domain varchar(50)
+code varchar(50)
+label varchar(100)
+description text nullable
+is_active boolean
+sort_order int
+Índices
+
+unique (domain, code)
+Uso: UI, filtros, configuración, no como núcleo obligatorio de integridad.
+
+12. Auditoría
+12.1 Eventos de auditoría
+audit_events
+Bitácora transversal funcional y de seguridad.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id nullable
+user_id UUID FK -> users.id nullable
+event_type varchar(50)
+ejemplos: login_success, login_failed, file_uploaded, reconciliation_run, manual_match, export_report
+module varchar(50)
+entity_type varchar(50) nullable
+entity_id UUID nullable
+action varchar(50)
+result varchar(20)
+valores: success, failure
+ip_address inet nullable
+user_agent text nullable
+request_id varchar(100) nullable
+event_timestamp timestamptz
+details_json jsonb nullable
+Índices
+
+index company_id
+index user_id
+index event_type
+index module
+index event_timestamp
+index request_id
+12.2 Auditoría de cambios
+audit_entity_changes
+Histórico antes/después para entidades críticas.
+
+Campos
+
+id UUID PK
+company_id UUID FK -> companies.id nullable
+entity_type varchar(50)
+entity_id UUID
+change_type varchar(20)
+valores: insert, update, delete
+changed_by UUID FK -> users.id nullable
+changed_at timestamptz
+old_values_json jsonb nullable
+new_values_json jsonb nullable
+reason text nullable
+request_id varchar(100) nullable
+Índices
+
+index (entity_type, entity_id)
+index company_id
+index changed_by
+index changed_at
+13. Relaciones principales
+Relaciones clave
+companies 1:N bank_accounts
+companies 1:N uploaded_files
+companies 1:N bank_statements
+companies 1:N ledger_books
+companies 1:N reconciliation_rules
+companies 1:N reconciliation_runs
+bank_accounts 1:N bank_statements
+bank_statements 1:N bank_transactions
+ledger_books 1:N ledger_transactions
+reconciliation_runs 1:N reconciliation_results
+reconciliation_results N:M bank_transactions
+reconciliation_results N:M ledger_transactions
+reconciliation_runs 1:N reconciliation_differences
+reconciliation_runs 1:N reconciliation_history
+14. Claves foráneas críticas
+Deben existir con integridad estricta
+bank_accounts.company_id -> companies.id
+uploaded_files.company_id -> companies.id
+import_batches.uploaded_file_id -> uploaded_files.id
+bank_statements.bank_account_id -> bank_accounts.id
+bank_transactions.bank_statement_id -> bank_statements.id
+ledger_transactions.ledger_book_id -> ledger_books.id
+reconciliation_runs.bank_account_id -> bank_accounts.id
+reconciliation_results.reconciliation_run_id -> reconciliation_runs.id
+reconciliation_result_bank_transactions.bank_transaction_id -> bank_transactions.id
+reconciliation_result_ledger_transactions.ledger_transaction_id -> ledger_transactions.id
+reconciliation_differences.reconciliation_run_id -> reconciliation_runs.id
+Recomendación importante
+En casi todas las tablas operativas conviene guardar también company_id, incluso si podría inferirse, para:
+
+simplificar filtros multiempresa
+mejorar indexación
+reforzar aislamiento
+hacer reporting más eficiente
+15. Índices recomendados
+Índices transversales
+En casi toda tabla operativa:
+
+company_id
+created_at
+status cuando aplique
+Índices de conciliación
+En bank_transactions:
+
+(company_id, bank_account_id, transaction_date)
+(company_id, bank_account_id, net_amount)
+(company_id, reconciliation_status)
+reference_normalized
+trigram description_normalized
+En ledger_transactions:
+
+(company_id, bank_account_id, transaction_date)
+(company_id, account_code, transaction_date)
+(company_id, net_amount)
+(company_id, reconciliation_status)
+reference_normalized
+trigram description_normalized
+En reconciliation_runs:
+
+(company_id, bank_account_id, period_start, period_end)
+(company_id, status)
+En reconciliation_results:
+
+reconciliation_run_id
+status
+confidence_score
+16. Estrategia de particionamiento
+Para miles de conciliaciones diarias, sí conviene pensar esto desde ya.
+
+Tablas candidatas a partición
+bank_transactions
+ledger_transactions
+audit_events
+audit_entity_changes
+opcionalmente reconciliation_history
+Estrategia recomendada
+Particionamiento por rango de fecha
+Primera opción:
+
+mensual o trimestral según volumen
+Ejemplo conceptual:
+
+bank_transactions_2026_01
+bank_transactions_2026_02
+Subcriterio lógico de consulta
+Como los reportes y conciliaciones casi siempre operan por:
+
+empresa
+cuenta
+período
+El particionamiento temporal encaja bien.
+
+Cuándo usar partición por empresa
+No lo recomiendo inicialmente, porque:
+
+multiplica objetos de BD
+complica administración
+suele escalar peor si hay muchas empresas medianas
+Recomendación práctica
+particionar por transaction_date en tablas transaccionales grandes
+mantener índices locales por partición
+archivar particiones antiguas si el volumen crece mucho
+17. Reglas de integridad recomendadas
+Reglas fuertes
+net_amount <> 0 para movimientos relevantes, salvo casos especiales
+no permitir conciliación confirmada sin al menos un movimiento bancario y uno contable
+no permitir confirmar un match con difference_amount no permitido por política
+no permitir doble asignación activa del mismo movimiento sin reversión controlada
+no permitir cierre de corrida con diferencias abiertas si la política exige resolución
+Recomendación técnica
+No toda lógica debe vivir en constraints de BD. Parte debe vivir en capa de aplicación, porque:
+
+algunas reglas son contextuales
+algunas dependen del tipo de conciliación
+otras pueden cambiar por política empresarial
+18. Consideraciones para uno a uno, uno a muchos y muchos a uno
+El punto clave aquí es que la conciliación no debe modelarse con columnas directas en movimientos, sino con una entidad intermedia.
+
+Por eso reconciliation_results + tablas puente resuelven bien:
+
+uno a uno: 1 banco + 1 contable
+uno a muchos: 1 banco + N contables
+muchos a uno: N bancos + 1 contable
+muchos a muchos: lo dejamos soportado estructuralmente, aunque operativamente puede restringirse
+Ese diseño evita rehacer la base cuando crezca la complejidad.
+
+19. Estrategia de auditoría empresarial
+Dos niveles
+1. Auditoría funcional
+Qué hizo el usuario en negocio:
+
+cargó archivo
+aprobó conciliación
+rechazó match
+resolvió diferencia
+Tablas:
+
+audit_events
+reconciliation_history
+2. Auditoría de datos
+Qué cambió en registros:
+
+valor anterior
+valor nuevo
+usuario
+fecha
+request
+Tabla:
+
+audit_entity_changes
+Recomendación
+No registrar “before/after” de todas las tablas siempre. Eso puede crecer demasiado. Priorizar:
+
+reglas
+usuarios
+cuentas
+conciliaciones
+diferencias
+configuraciones
+20. ER resumido por dominio
+[SEGURIDAD]
+users --< user_roles >-- roles --< role_permissions >-- permissions
+users --< user_companies >-- companies
+
+[CONFIGURACION]
+companies --< bank_accounts >-- banks
+companies --< reconciliation_rules
+
+[INGESTA]
+companies --< uploaded_files --< import_batches --< import_errors
+import_batches --< stg_bank_transactions
+import_batches --< stg_ledger_transactions
+
+[OPERACION]
+bank_accounts --< bank_statements --< bank_transactions
+companies --< ledger_books --< ledger_transactions
+companies --< reconciliation_runs --< reconciliation_results
+reconciliation_results --< reconciliation_result_bank_transactions >-- bank_transactions
+reconciliation_results --< reconciliation_result_ledger_transactions >-- ledger_transactions
+reconciliation_runs --< reconciliation_differences
+reconciliation_runs --< reconciliation_comments
+reconciliation_runs --< reconciliation_history
+
+[AUDITORIA]
+companies --< audit_events
+companies --< audit_entity_changes
+21. Decisiones clave del modelo
+Este diseño toma varias decisiones importantes:
+
+multiempresa real: company_id en tablas operativas
+staging explícito: no mezclar crudo con operativo
+conciliación flexible: entidad de resultado + tablas puente
+auditoría fuerte: funcional y de cambios
+escalabilidad: índices y particiones pensadas desde el inicio
+reglas configurables: tabla propia con JSON de parámetros
+soporte para alta variabilidad: normalizados + campos crudos + metadata JSON
+Cierre de la Etapa 3
+Con esta etapa ya tenemos definido:
+
+diagrama ER lógico
+tablas principales
+relaciones
+claves foráneas
+índices recomendados
+estrategia de particionamiento
+auditoría empresarial
+El siguiente paso natural es la Etapa 4: motor de conciliación, donde vamos a diseñar la lógica de matching:
+
+exacto
+flexible
+similitud textual
+uno a uno
+uno a muchos
+muchos a uno
+score de confianza
+flujo de revisión manual
+Si quieres, en el siguiente mensaje sigo directamente con la Etapa 4.
+
+8:26 a.m.
+Continúa con la Etapa 4.
+
+Diseña el motor de conciliación inteligente.
+
+Incluye:
+- Match exacto
+- Match por tolerancia
+- Match por referencia
+- Uno a muchos
+- Muchos a uno
+- Algoritmo de scoring
+- Reglas configurables
+- Flujo de aprobación
+
+No escribas código todavía.
+8:29 a.m.
+Perfecto. Vamos con la Etapa 4: motor de conciliación inteligente. Aquí diseñamos el núcleo funcional del producto: cómo detectar coincidencias confiables, cómo manejar ambigüedad y cómo dejar trazabilidad suficiente para operación y auditoría.
+
+No voy a escribir código todavía. La idea es dejar definido el diseño técnico del motor para luego implementarlo por fases sin improvisar.
+
+Etapa 4: Motor de Conciliación Inteligente
+1. Objetivo del motor
+El motor debe comparar movimientos bancarios y movimientos contables para:
+
+identificar coincidencias automáticas con alta certeza
+proponer coincidencias con confianza media
+detectar diferencias y excepciones
+soportar conciliación uno a uno, uno a muchos y muchos a uno
+minimizar falsos positivos
+permitir revisión manual controlada cuando no haya certeza suficiente
+La regla principal aquí es simple: el motor debe ser útil, pero conservador. En conciliación bancaria empresarial, un falso match cuesta más que una coincidencia pendiente.
+
+2. Principios de diseño
+Principios base
+determinístico primero, heurístico después
+prioridad a exactitud sobre cobertura
+explicabilidad obligatoria
+configuración por empresa y por cuenta
+reproducibilidad de resultados
+aislamiento por período, empresa y cuenta
+auditoría de cada decisión del motor
+Implicación práctica
+El motor no debe ser una “caja negra”. Cada match debe poder responder:
+
+qué regla lo generó
+qué campos coincidieron
+qué tolerancias se usaron
+cuál fue el score
+por qué fue automático o quedó pendiente
+3. Tipos de conciliación soportados
+3.1 Uno a uno
+Un movimiento bancario coincide con un movimiento contable.
+
+Ejemplos:
+
+transferencia por el mismo valor y fecha equivalente
+consignación con referencia idéntica
+comisión registrada una sola vez en ambos lados
+3.2 Uno a muchos
+Un movimiento bancario corresponde a varios movimientos contables.
+
+Ejemplos:
+
+un abono bancario que agrupa varias facturas
+un pago bancario único contra varias partidas contables
+un recaudo consolidado
+3.3 Muchos a uno
+Varios movimientos bancarios corresponden a un solo movimiento contable.
+
+Ejemplos:
+
+un asiento contable consolidado de varios ingresos
+varias consignaciones aplicadas a un solo registro contable
+3.4 Muchos a muchos
+Estructuralmente puede existir, pero no recomiendo habilitarlo en automatización inicial. Puede quedar reservado para revisión manual avanzada porque su riesgo operativo es mucho mayor.
+
+4. Pipeline del motor
+Propongo este flujo interno del motor:
+
+selección del universo
+pre-filtrado
+normalización operativa para matching
+aplicación secuencial de reglas
+resolución de conflictos
+asignación de score
+clasificación del resultado
+generación de diferencias
+persistencia y auditoría
+flujo de revisión y aprobación
+5. Selección del universo de conciliación
+Antes de intentar hacer match, el motor debe acotar el conjunto de trabajo.
+
+Filtros base
+empresa
+cuenta bancaria
+período de conciliación
+moneda
+estado de conciliación pendiente o parcialmente conciliado
+movimientos no reversados
+movimientos no excluidos por regla
+Resultado
+Se forman dos conjuntos:
+
+universo bancario candidato
+universo contable candidato
+Esto es clave para rendimiento y para evitar comparaciones innecesarias.
+
+6. Pre-filtrado
+Antes del scoring completo, conviene reducir combinaciones.
+
+Criterios de pre-filtrado
+signo compatible
+débito con egreso
+crédito con ingreso
+valor dentro de tolerancia preliminar
+fecha dentro de ventana máxima
+coincidencia probable por cuenta contable asociada
+referencia o texto con claves compartidas si existen
+Beneficio
+Esto reduce drásticamente el costo computacional y mejora precisión.
+
+7. Estrategias de match
+7.1 Match exacto
+Es la estrategia de mayor confianza.
+
+Criterios típicos
+mismo valor neto
+misma fecha exacta o fecha contable equivalente
+misma referencia normalizada o muy alta coincidencia de referencia
+signo compatible
+moneda igual
+Casos comunes
+transferencias
+consignaciones
+pagos bancarios simples
+comisiones registradas igual
+Resultado esperado
+Si cumple todos los criterios duros, el match puede marcarse como:
+
+automatic_confirmed si la política lo permite
+o suggested_high_confidence si requiere aprobación
+7.2 Match por tolerancia
+Se usa cuando hay pequeñas variaciones aceptables.
+
+Tolerancias típicas
+fecha: +/- N días
+valor: +/- monto fijo
+valor: +/- porcentaje
+diferencia permitida por redondeo, retención o comisión conocida
+Casos comunes
+desfase entre fecha bancaria y contable
+redondeos
+diferencias menores autorizadas
+registros contabilizados el día siguiente
+Reglas
+tolerancia de fecha configurable por empresa o cuenta
+tolerancia de valor configurable por regla
+si hay diferencia monetaria, debe quedar explícita
+Resultado esperado
+score medio o alto según combinación
+si la diferencia económica supera umbral, no se confirma automáticamente
+7.3 Match por referencia
+Aquí la referencia o identificador de operación pesa mucho.
+
+Campos relevantes
+número de comprobante
+referencia bancaria
+consecutivo de transferencia
+voucher
+identificador externo
+fragmentos numéricos útiles extraídos de texto
+Proceso
+normalizar referencia
+extraer tokens
+comparar coincidencia exacta o parcial
+ponderar longitud, calidad y unicidad de la referencia
+Cuidado importante
+No toda referencia sirve igual. Una referencia como PAGO o TRANSFERENCIA no aporta valor real. El motor debe distinguir:
+
+referencias de alta calidad
+referencias débiles o genéricas
+Resultado esperado
+referencia fuerte puede elevar mucho el score
+referencia débil no debe forzar match por sí sola
+8. Match uno a muchos
+Objetivo
+Vincular un movimiento bancario con varias partidas contables cuyo total coincide.
+
+Escenarios
+un ingreso bancario agrupa varias facturas
+un egreso bancario cubre múltiples comprobantes
+recaudos consolidados
+Estrategia
+seleccionar candidatos contables por ventana de fecha y signo
+agrupar por subconjuntos posibles
+evaluar sumatoria contra monto bancario
+validar referencias, tercero, descripción y proximidad temporal
+escoger la combinación con mejor score y menor ambigüedad
+Regla de negocio importante
+No conviene abrir búsqueda combinatoria total sin control, porque explota en costo.
+
+Restricciones recomendadas
+máximo número de partidas por combinación: por ejemplo 2 a 5 inicialmente
+ventana de fecha acotada
+priorizar partidas con referencias relacionadas
+cortar búsqueda cuando hay demasiadas combinaciones
+Resultado
+si la suma coincide exacta y el contexto es fuerte, puede proponerse con alto score
+si hay varias combinaciones equivalentes, debe pasar a revisión manual
+9. Match muchos a uno
+Objetivo
+Vincular varios movimientos bancarios a un solo asiento o movimiento contable.
+
+Casos típicos
+varias consignaciones registradas como un solo asiento contable
+pagos fraccionados
+recaudos parciales
+Estrategia
+La lógica es simétrica a uno a muchos:
+
+seleccionar movimientos bancarios candidatos
+generar combinaciones controladas
+validar sumatoria contra movimiento contable
+ponderar fechas, referencia, tercero y descripción
+elegir la mejor combinación no ambigua
+Restricciones
+Las mismas:
+
+límites de cardinalidad
+ventana temporal
+corte por complejidad
+evitar elegir combinación si hay empate fuerte entre varias opciones
+10. Reglas configurables
+El motor debe ser gobernado por reglas, no por condicionales rígidos en código.
+
+Tipos de reglas
+por empresa
+por cuenta bancaria
+por tipo de movimiento
+por banco
+por rango de monto
+por naturaleza débito/crédito
+por origen del archivo
+por patrón de referencia o descripción
+Parámetros configurables por regla
+prioridad
+activa/inactiva
+tipo de match permitido
+tolerancia de fecha
+tolerancia de monto
+score mínimo para sugerencia
+score mínimo para autoaprobación
+obligatoriedad de referencia
+obligatoriedad de descripción
+límite de cardinalidad para uno a muchos
+exclusiones
+necesidad de aprobación manual
+Ejemplo funcional de regla
+nombre: Transferencias exactas cuenta principal
+aplica a: cuenta bancaria X
+tipo: exact
+fecha tolerancia: 0
+monto tolerancia: 0
+requiere referencia: sí
+score autoaprobación: 95
+Otro ejemplo:
+
+nombre: Consignaciones agrupadas
+tipo: one_to_many
+fecha tolerancia: 2 días
+monto tolerancia: 0
+máximo de partidas: 4
+score autoaprobación: no permitido
+requiere revisión manual: sí
+11. Algoritmo de scoring
+El score debe representar confianza, no solo similitud superficial.
+
+Escala recomendada
+0 a 100
+Componentes del score
+Propongo ponderar así, ajustable por regla:
+
+monto: 35 puntos
+fecha: 20 puntos
+referencia: 25 puntos
+descripción / tercero: 15 puntos
+señales contextuales: 5 puntos
+Total: 100
+
+11.1 Score por monto
+Criterio
+coincidencia exacta: 35
+dentro de tolerancia muy pequeña: 25 a 34
+diferencia moderada permitida: 10 a 24
+fuera de tolerancia: 0
+Observación
+El monto es una señal crítica. Si falla fuerte, normalmente no debe haber match automático.
+
+11.2 Score por fecha
+Criterio ejemplo
+misma fecha: 20
+diferencia de 1 día: 16
+diferencia de 2 días: 12
+diferencia de 3 días: 8
+fuera de tolerancia: 0
+Ajuste posible
+Para fines de semana o cierres, algunas cuentas pueden usar una curva menos estricta.
+
+11.3 Score por referencia
+Criterio ejemplo
+referencia exacta normalizada: 25
+referencia con alta similitud: 18 a 24
+coincidencia parcial de tokens relevantes: 10 a 17
+referencia genérica o vacía: 0 a 5
+Regla importante
+Si una regla exige referencia y no existe coincidencia mínima, el match debe descartarse aunque otros factores sean altos.
+
+11.4 Score por descripción / tercero
+Criterio
+similitud alta de descripción o tercero: 12 a 15
+similitud media: 6 a 11
+sin evidencia textual útil: 0 a 5
+Técnicas esperadas después
+normalización de texto
+eliminación de stopwords operativas
+similitud tokenizada
+trigram o fuzzy matching controlado
+11.5 Señales contextuales
+Posibles señales
+mismo banco/cuenta relacionada
+mismo tipo de operación
+mismo tercero esperado
+patrón histórico compatible
+regla prioritaria específica
+Esto no debe dominar el score, solo desempatar o reforzar.
+
+12. Clasificación por umbrales
+Propongo esta política base:
+
+95 a 100: match automático confiable
+85 a 94: sugerencia fuerte, puede autoaprobarse según regla
+70 a 84: sugerencia para revisión manual
+50 a 69: coincidencia débil, mostrar solo como candidato secundario
+0 a 49: no candidato
+Importante
+El score por sí solo no basta. También deben existir gates duros:
+
+signo compatible
+monto dentro de tolerancia máxima
+unicidad suficiente
+no conflicto con otro match más fuerte
+13. Resolución de conflictos
+Este punto es crítico. Puede haber varios candidatos para un mismo movimiento.
+
+Casos de conflicto
+un movimiento bancario coincide razonablemente con dos contables
+varias combinaciones uno a muchos dan la misma suma
+un mismo movimiento contable puede ser consumido por distintos matches
+Estrategia recomendada
+ordenar candidatos por score
+aplicar prioridad de regla
+preferir exact match sobre fuzzy
+preferir menor diferencia de fecha
+preferir referencia más fuerte
+exigir diferencia mínima entre primer y segundo candidato
+Regla de seguridad
+Si el primer candidato no supera claramente al segundo, el resultado debe quedar en revisión manual.
+
+Por ejemplo:
+
+candidato A: 91
+candidato B: 89
+No debería autoaprobarse. Hay ambigüedad.
+
+14. Orden de aplicación de reglas
+El motor no debe ejecutar todo a la vez. Debe hacerlo por etapas.
+
+Secuencia recomendada
+exact match estricto
+exact match con referencia fuerte
+match por tolerancia de fecha
+match por tolerancia de monto autorizada
+match por similitud de referencia
+uno a muchos
+muchos a uno
+sugerencias de baja confianza
+generación final de diferencias
+Beneficio
+mejora rendimiento
+evita consumir movimientos con reglas débiles antes de probar reglas fuertes
+facilita explicabilidad
+15. Estados del motor y de los resultados
+Estado de movimiento
+pending
+suggested
+matched
+partially_matched
+rejected
+excluded
+reversed
+Estado de resultado de conciliación
+suggested
+auto_confirmed
+manual_confirmed
+rejected
+reversed
+Estado de corrida
+pending
+running
+completed
+failed
+approved
+closed
+16. Flujo de aprobación
+Flujo recomendado
+Nivel 1: ejecución automática
+El motor corre y genera:
+
+matches automáticos
+sugerencias
+diferencias
+métricas
+Nivel 2: revisión del analista
+El analista revisa:
+
+sugerencias medias
+excepciones
+diferencias
+matches agrupados
+Puede:
+
+confirmar
+rechazar
+editar agrupación
+crear conciliación manual
+registrar comentario o evidencia
+Nivel 3: aprobación supervisora
+Según política de la empresa, el supervisor:
+
+aprueba la corrida
+devuelve para ajuste
+cierra el período
+autoriza diferencias aceptadas
+Nivel 4: cierre
+Una vez aprobado:
+
+se bloquean cambios ordinarios
+solo se permite reversión con permiso especial
+se generan reportes finales y auditoría
+17. Conciliación manual asistida
+El motor no termina donde falla. Debe asistir al usuario.
+
+Qué debe ofrecer
+lista de mejores candidatos por movimiento
+score visible
+explicación del score
+indicadores de monto, fecha, referencia y texto
+vista lado a lado banco vs contabilidad
+sumatoria asistida para uno a muchos y muchos a uno
+alertas cuando una operación ya está parcialmente usada
+Objetivo
+Reducir trabajo manual sin forzar decisiones automáticas incorrectas.
+
+18. Explicabilidad del motor
+Cada resultado debería poder mostrar algo como:
+
+regla aplicada: Exact Match Transferencia
+score total: 97
+monto: 35/35
+fecha: 20/20
+referencia: 25/25
+descripción: 12/15
+contexto: 5/5
+O en un caso sugerido:
+
+regla aplicada: Agrupación Consignaciones
+score total: 82
+suma exacta encontrada
+diferencia de fechas: 2 días
+referencia parcial coincidente
+requiere revisión manual por ambigüedad
+Esto es importante para confianza del usuario y para auditoría.
+
+19. Auditoría del motor
+Cada corrida debe dejar evidencia de:
+
+universo procesado
+reglas activas aplicadas
+cantidad de candidatos evaluados
+matches confirmados por regla
+matches sugeridos por regla
+diferencias detectadas
+conflictos ambiguos
+tiempos de ejecución
+usuario que lanzó la corrida
+parámetros usados
+Y cada resultado individual debe guardar:
+
+regla origen
+score
+explicación compacta
+momento de creación
+usuario que confirmó o rechazó
+20. Escalabilidad del motor
+Para miles de conciliaciones diarias, el motor debe diseñarse con control de costo.
+
+Estrategias
+procesar por empresa + cuenta + período
+prefiltrar antes del scoring completo
+usar índices fuertes en monto, fecha, referencia y estado
+ejecutar uno a muchos y muchos a uno solo sobre subconjuntos acotados
+usar colas asíncronas
+serializar corrida por cuenta/período con locks
+guardar resultados intermedios si el lote es grande
+permitir reprocess parcial sin recalcular todo
+Muy importante
+Los algoritmos combinatorios deben tener límites duros. Si no, el costo crece demasiado en agrupaciones.
+
+21. Arquitectura lógica del motor
+[Selector de universo]
+    |
+    v
+[Pre-filtro de candidatos]
+    |
+    v
+[Motor de reglas]
+    |-- exact match
+    |-- match por tolerancia
+    |-- match por referencia
+    |-- one-to-many
+    |-- many-to-one
+    |
+    v
+[Scoring]
+    |
+    v
+[Resolución de conflictos]
+    |
+    v
+[Clasificación]
+    |-- auto_confirmed
+    |-- suggested
+    |-- rejected
+    |-- difference
+    |
+    v
+[Persistencia + auditoría]
+    |
+    v
+[Flujo de revisión y aprobación]
+22. Recomendación empresarial final
+La estrategia correcta para este producto es:
+
+reglas fuertes primero
+scoring explicable
+automatización conservadora
+agrupaciones controladas
+revisión asistida para casos ambiguos
+aprobación por niveles según riesgo
+trazabilidad completa de cada decisión
+Ese enfoque te da algo importante: precisión operacional sin sacrificar productividad.
+
+Cierre de la Etapa 4
+Con esta etapa ya queda definido:
+
+cómo funciona el motor
+qué tipos de match soporta
+cómo se calculan score y confianza
+cómo se parametriza por reglas
+cómo maneja conflictos
+cómo entra la aprobación humana
+cómo se asegura trazabilidad y escalabilidad
+El siguiente paso natural es la Etapa 5: interfaz web, donde diseñamos la experiencia operativa completa:
+
+login
+dashboard
+carga
+validación
+resultados automáticos
+pendientes
+comparación banco vs contabilidad
+conciliación manual
+reportes
+administración
+Si quieres, seguimos directamente con la Etapa 5.
+
+8:30 a.m.
+
+Arquitectura aprobada.
+
+Inicia la Fase 1 de desarrollo.
+
+Genera:
+
+- estructura de carpetas
+- requirements.txt
+- .env.example
+- docker-compose.yml
+- FastAPI inicial
+- PostgreSQL
+- autenticación JWT
+
+Crea los archivos uno por uno indicando exactamente dónde guardarlos en VS Code.

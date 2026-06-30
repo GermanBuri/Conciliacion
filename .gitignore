@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+backend/storage/
+tmp_*.csv
+*.log
+
+.DS_Store
+Thumbs.db
